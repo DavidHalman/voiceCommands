@@ -38,8 +38,7 @@ class ChromeRule(MappingRule):
         "history forward":  Key("L")
     }
 
-# context = AppContext(executable="chrome.exe")
-# grammar = Grammar("Chrome", context=context)
-grammar = Grammar("Chrome")
+context = AppContext(executable="chrome.exe")
+grammar = Grammar("Chrome", context=context)
 grammar.add_rule(ChromeRule())
 grammar.load()
